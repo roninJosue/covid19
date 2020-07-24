@@ -1,0 +1,23 @@
+{
+  "name": "covid19",
+  "version": "1.0.0",
+  "description": "Landing page covid19",
+  "main": "index.js",
+  "scripts": {
+    "start": "live-server && node-sass sass/main.scss css/style.css -w",
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/roninJosue/covid19.git"
+  },
+  "author": "Reynaldo Cano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/roninJosue/covid19/issues"
+  },
+  "homepage": "https://github.com/roninJosue/covid19#readme",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
