@@ -36,7 +36,52 @@
   }
 }
 
-.section-overwiew {
+.section-overview,
+.section-contagion {
+  min-height: 55vh;
+}
+
+.section-overview {
   padding-top: 4rem;
-  min-height: 100vh;
+  display: flex;
+  align-items: center;
+
+  &--img {
+    width: 100%;
+  }
+
+  .img {
+    flex: 1 0 50%;
+  }
+
+  .text {
+    flex: 1 0 50%;
+  }
+}
+
+.section-contagion {
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /*.container {
+    /*position: relative;
+    &:first-of-type {
+      &::before{
+        position: absolute;
+        content: '';
+        display: block;
+        width: 100px;
+        height: 50%;
+        bottom: 0;
+        left: -3rem;
+        background-image: url("../img/virus1.svg");
+        background-repeat: no-repeat;
+      }
+    }*/
+    background-image: url("../img/virus1.svg");
+    background-repeat: no-repeat;
+    background-position: 5.2rem bottom;
+  /*}*/
 }

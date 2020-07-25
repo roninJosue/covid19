@@ -78,6 +78,17 @@
     }
   }
 
+  &--red-2 {
+    background-color: rgba(250, 86, 82, 0.15);
+    color: $color-alert;
+    text-transform: capitalize;
+    font-weight: bold;
+
+    &:after{
+      background-color: rgba(250, 86, 82, 0.15);
+    }
+  }
+
   &--green{
     background-color: $color-primary;
     color: $color-white;

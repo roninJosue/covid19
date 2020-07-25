@@ -1,4 +1,65 @@
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+}
+
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important;
+
+  @include respond(tab-port) {
+    margin-bottom: 3rem !important;
+  }
+}
+
+.u-margin-bottom-big{
+  margin-bottom: 8rem !important;
+
+  @include respond(tab-port){
+    margin-bottom: 5rem !important;
+  }
+}
+
 .group {
   display: flex;
   align-items: center;
+}
+
+.h2 {
+  color: #fa5652;
+  font-weight: bold;
+  font-family: 'RedHatDisplay', sans-serif;
+  font-size: 2.5rem;
+
+  &--greater {
+    font-size: 4.5rem;
+  }
+
+  &--color-2 {
+    color: $color-text-primary;
+  }
+}
+
+.paragraph {
+  width: 70%;
+  font-size: 1.7rem;
+  line-height: 3rem;
+  text-transform: capitalize;
+  color: $color-tertiary;
+
+  &--2 {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  &--center {
+    text-align: center;
+  }
+}
+
+.container {
+  width: 75vw;
+  margin: 0 auto;
 }

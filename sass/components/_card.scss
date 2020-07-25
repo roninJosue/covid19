@@ -1,0 +1,56 @@
+.card {
+  background: #fff;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+  border-radius: 10px;
+  width: 31%;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem;
+  border-bottom: 5px solid transparent;
+  transition: all .4s ease;
+
+  &:hover {
+    cursor: pointer;
+    border-bottom-color: #fb4c47;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 23rem;
+    width: 100%;
+
+    &--1 {
+      background-image: url("../img/air-transmission.svg");
+    }
+
+    &--2 {
+      background-image: url("../img/human-contact.svg");
+    }
+
+    &--3 {
+      background-image: url("../img/objects.svg");
+    }
+  }
+
+  &__title {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 3rem;
+    color: #035755;
+  }
+
+  &__description {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    text-transform: capitalize;
+    color: $color-tertiary;
+    text-align: center;
+  }
+}

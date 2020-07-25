@@ -43,9 +43,53 @@ $breakpoint argument choices:
     opacity: 1;
     transform: translate(0); } }
 
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+  @media (max-width: 56.25em) {
+    .u-margin-bottom-medium {
+      margin-bottom: 3rem !important; } }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+  @media (max-width: 56.25em) {
+    .u-margin-bottom-big {
+      margin-bottom: 5rem !important; } }
+
 .group {
   display: flex;
   align-items: center; }
+
+.h2 {
+  color: #fa5652;
+  font-weight: bold;
+  font-family: 'RedHatDisplay', sans-serif;
+  font-size: 2.5rem; }
+  .h2--greater {
+    font-size: 4.5rem; }
+  .h2--color-2 {
+    color: #035755; }
+
+.paragraph {
+  width: 70%;
+  font-size: 1.7rem;
+  line-height: 3rem;
+  text-transform: capitalize;
+  color: #4b4f51; }
+  .paragraph--2 {
+    width: 50%;
+    margin: 0 auto; }
+  .paragraph--center {
+    text-align: center; }
+
+.container {
+  width: 75vw;
+  margin: 0 auto; }
 
 /*Reset universal selector*/
 *,
@@ -64,7 +108,8 @@ $breakpoint argument choices:
   src: url("../fonts/RedHatDisplay-Bold.ttf"); }
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+  scroll-behavior: smooth; }
   @media (max-width: 75em) {
     html {
       font-size: 56.25%; } }
@@ -78,7 +123,8 @@ html {
 body {
   box-sizing: border-box;
   margin: 0;
-  font-family: 'Gelion', sans-serif; }
+  font-family: 'Gelion', sans-serif;
+  background: linear-gradient(90deg, #fff8f8 85%, white 100%); }
   @media (max-width: 56.25em) {
     body {
       padding: 0; } }
@@ -140,6 +186,14 @@ body {
   .btn--red:after {
     background-color: #ff383d; }
 
+.btn--red-2 {
+  background-color: rgba(250, 86, 82, 0.15);
+  color: #fa5652;
+  text-transform: capitalize;
+  font-weight: bold; }
+  .btn--red-2:after {
+    background-color: rgba(250, 86, 82, 0.15); }
+
 .btn--green {
   background-color: #55c57a;
   color: #fff; }
@@ -168,6 +222,48 @@ body {
 .btn-text:active {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   transform: translateY(0); }
+
+.card {
+  background: #fff;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  width: 31%;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem;
+  border-bottom: 5px solid transparent;
+  transition: all .4s ease; }
+  .card:hover {
+    cursor: pointer;
+    border-bottom-color: #fb4c47; }
+  .card__img {
+    display: flex;
+    justify-content: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 23rem;
+    width: 100%; }
+    .card__img--1 {
+      background-image: url("../img/air-transmission.svg"); }
+    .card__img--2 {
+      background-image: url("../img/human-contact.svg"); }
+    .card__img--3 {
+      background-image: url("../img/objects.svg"); }
+  .card__title {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 3rem;
+    color: #035755; }
+  .card__description {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    text-transform: capitalize;
+    color: #4b4f51;
+    text-align: center; }
 
 .row {
   max-width: 114rem;
@@ -307,6 +403,41 @@ body {
       line-height: 190%;
       margin-bottom: 3.5rem; }
 
-.section-overwiew {
+.section-overview,
+.section-contagion {
+  min-height: 55vh; }
+
+.section-overview {
   padding-top: 4rem;
-  min-height: 100vh; }
+  display: flex;
+  align-items: center; }
+  .section-overview--img {
+    width: 100%; }
+  .section-overview .img {
+    flex: 1 0 50%; }
+  .section-overview .text {
+    flex: 1 0 50%; }
+
+.section-contagion {
+  /*.container {
+    /*position: relative;
+    &:first-of-type {
+      &::before{
+        position: absolute;
+        content: '';
+        display: block;
+        width: 100px;
+        height: 50%;
+        bottom: 0;
+        left: -3rem;
+        background-image: url("../img/virus1.svg");
+        background-repeat: no-repeat;
+      }
+    }*/
+  background-image: url("../img/virus1.svg");
+  background-repeat: no-repeat;
+  background-position: 5.2rem bottom;
+  /*}*/ }
+  .section-contagion__cards {
+    display: flex;
+    flex-wrap: wrap; }
