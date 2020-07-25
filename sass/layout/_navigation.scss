@@ -1,7 +1,7 @@
 .navigation {
   display: flex;
   flex-direction: row;
-  width: 80vw;
+  width: 75vw;
   margin: 0 auto;
   padding-top: 2.6rem;
   justify-content: space-between;
@@ -18,7 +18,7 @@
   &__item {
     display: inline;
     text-decoration: none;
-    margin-right: 5rem;
+    margin-right: 3rem;
     transition: all 2s ease;
   }
 

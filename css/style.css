@@ -134,6 +134,12 @@ body {
     /*background-color: $color-btn-outline;*/
     border: 2px solid #ff383d; }
 
+.btn--red {
+  background-color: #ff383d;
+  color: #fff; }
+  .btn--red:after {
+    background-color: #ff383d; }
+
 .btn--green {
   background-color: #55c57a;
   color: #fff; }
@@ -204,7 +210,7 @@ body {
     width: calc(3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
 
 .header {
-  height: 95vh;
+  height: 100vh;
   font-size: 1.6rem;
   /*background: linear-gradient(360deg, rgba(255, 248, 248, 0.5) 0%, rgba(255, 241, 241, 0) 108.69%);*/
   /*background: rgb(255,248,248);*/
@@ -234,7 +240,7 @@ body {
 .navigation {
   display: flex;
   flex-direction: row;
-  width: 80vw;
+  width: 75vw;
   margin: 0 auto;
   padding-top: 2.6rem;
   justify-content: space-between;
@@ -246,7 +252,7 @@ body {
   .navigation__item {
     display: inline;
     text-decoration: none;
-    margin-right: 5rem;
+    margin-right: 3rem;
     transition: all 2s ease; }
   .navigation__link {
     color: #035755;
@@ -271,3 +277,36 @@ body {
       color: #fb4c47; }
       .navigation__link:hover::after {
         visibility: visible; }
+
+.illustration {
+  margin-top: 4rem;
+  background-image: url("../img/Illustration01.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 55%;
+  display: flex;
+  align-items: center;
+  min-height: 85%; }
+  .illustration--text {
+    width: 32%;
+    margin-left: 18rem;
+    line-height: 5rem; }
+    .illustration--text .alert {
+      color: #fa5652;
+      font-weight: bold;
+      font-family: 'RedHatDisplay', sans-serif; }
+    .illustration--text .stay-at-home {
+      font-size: 4rem;
+      color: #035755;
+      font-family: 'RedHatDisplay', sans-serif;
+      margin-bottom: 2rem; }
+    .illustration--text .message {
+      color: #4b4f51;
+      font-size: 1.7rem;
+      font-family: 'Gelion', sans-serif;
+      line-height: 190%;
+      margin-bottom: 3.5rem; }
+
+.section-overwiew {
+  padding-top: 4rem;
+  min-height: 100vh; }

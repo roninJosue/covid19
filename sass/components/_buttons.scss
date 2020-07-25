@@ -69,6 +69,15 @@
     }
   }
 
+  &--red{
+    background-color: $color-btn-outline;
+    color: $color-white;
+
+    &:after{
+      background-color: $color-btn-outline;
+    }
+  }
+
   &--green{
     background-color: $color-primary;
     color: $color-white;

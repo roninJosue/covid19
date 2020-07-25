@@ -1,0 +1,42 @@
+.illustration {
+  margin-top: 4rem;
+  background-image: url("../img/Illustration01.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 55%;
+  display: flex;
+  align-items: center;
+  min-height: 85%;
+
+  &--text {
+    width: 32%;
+    margin-left: 18rem;
+    line-height: 5rem;
+
+    .alert {
+      color: $color-alert;
+      font-weight: bold;
+      font-family: 'RedHatDisplay', sans-serif;
+    }
+
+    .stay-at-home {
+      font-size: 4rem;
+      color: $color-text-primary;
+      font-family: 'RedHatDisplay', sans-serif;
+      margin-bottom: 2rem;
+    }
+
+    .message {
+      color: $color-tertiary;
+      font-size: 1.7rem;
+      font-family: 'Gelion', sans-serif;
+      line-height: 190%;
+      margin-bottom: 3.5rem;
+    }
+  }
+}
+
+.section-overwiew {
+  padding-top: 4rem;
+  min-height: 100vh;
+}
