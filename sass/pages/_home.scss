@@ -37,7 +37,10 @@
 }
 
 .section-overview,
-.section-contagion {
+.section-contagion,
+.section-symptoms,
+.section-prevention,
+.section-contact {
   min-height: 55vh;
 }
 
@@ -80,8 +83,75 @@
         background-repeat: no-repeat;
       }
     }*/
-    background-image: url("../img/virus1.svg");
-    background-repeat: no-repeat;
-    background-position: 5.2rem bottom;
+  background-image: url("../img/virus1.svg");
+  background-repeat: no-repeat;
+  background-position: 5.2rem bottom;
   /*}*/
+}
+
+.section-symptoms {
+  background-image: url("../img/symptomps-virus-2.svg"),
+  url("../img/symptomps-virus-1.svg");
+  background-repeat: no-repeat;
+  background-position: 5.2rem 60rem,
+  right bottom;
+
+  &__img {
+    width: 80%;
+    align-self: center;
+  }
+}
+
+.section-prevention {
+  background-image: url("../img/virus-2.svg"),
+  url("../img/virus-3.svg"),
+  url("../img/virus-4.svg");
+  background-repeat: no-repeat;
+  background-position: 0 55rem,
+  right 85%,
+  100% bottom;
+
+  .prevention-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.section-contact {
+  .map {
+    display: flex;
+
+    .report {
+      flex: 1 0 30%;
+    }
+
+    &__img {
+      width: 50%;
+      flex: 1 0 70%;
+    }
+  }
+
+  .contact-form {
+    width: 50%;
+    margin: 0 auto;
+
+    .form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      background: #FFFFFF;
+      box-shadow: 0px 8px 80px rgba(0, 0, 0, 0.06);
+      border-radius: 57px;
+
+      input {
+        border: none;
+        &:focus {
+          border: none;
+        }
+      }
+    }
+  }
 }

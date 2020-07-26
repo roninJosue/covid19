@@ -71,7 +71,14 @@ $breakpoint argument choices:
   font-family: 'RedHatDisplay', sans-serif;
   font-size: 2.5rem; }
   .h2--greater {
-    font-size: 4.5rem; }
+    font-size: 5rem;
+    text-transform: capitalize; }
+  .h2--medium {
+    font-size: 4rem;
+    text-transform: capitalize; }
+  .h2--medium-2 {
+    font-size: 4.5rem;
+    text-transform: capitalize; }
   .h2--color-2 {
     color: #035755; }
 
@@ -84,12 +91,17 @@ $breakpoint argument choices:
   .paragraph--2 {
     width: 50%;
     margin: 0 auto; }
+  .paragraph--3 {
+    width: 80%; }
   .paragraph--center {
     text-align: center; }
 
 .container {
   width: 75vw;
   margin: 0 auto; }
+  .container__flex {
+    display: flex;
+    flex-direction: column; }
 
 /*Reset universal selector*/
 *,
@@ -174,7 +186,7 @@ body {
 
 .btn--outline {
   background-color: transparent;
-  border: 2px solid #fb4c47;
+  border: 2px solid #fb4c47 !important;
   color: #ff383d; }
   .btn--outline:after {
     /*background-color: $color-btn-outline;*/
@@ -194,34 +206,9 @@ body {
   .btn--red-2:after {
     background-color: rgba(250, 86, 82, 0.15); }
 
-.btn--green {
-  background-color: #55c57a;
-  color: #fff; }
-  .btn--green:after {
-    background-color: #55c57a; }
-
 .btn--animated {
   animation: moveInBottom .5s ease-out .75s;
   animation-fill-mode: backwards; }
-
-.btn-text:link, .btn-text:visited {
-  font-size: 1.8rem;
-  color: #55c57a;
-  display: inline-block;
-  text-decoration: none;
-  border-bottom: 1px solid #55c57a;
-  padding: 3px;
-  transition: all .2s; }
-
-.btn-text:hover {
-  background-color: #55c57a;
-  color: #fff;
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px); }
-
-.btn-text:active {
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-  transform: translateY(0); }
 
 .card {
   background: #fff;
@@ -264,6 +251,64 @@ body {
     text-transform: capitalize;
     color: #4b4f51;
     text-align: center; }
+
+.prevention-step {
+  display: flex;
+  width: 100%;
+  margin: 2rem;
+  align-items: center;
+  justify-content: space-between; }
+  .prevention-step--reverse {
+    flex-direction: row-reverse; }
+  .prevention-step__text {
+    flex: 1 0 60%;
+    display: flex;
+    flex-direction: row; }
+    .prevention-step__text--reverse {
+      flex: 1 0 40%; }
+      .prevention-step__text--reverse .paragraph {
+        width: 100%; }
+  .prevention-step__number {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    background-color: rgba(250, 86, 82, 0.15);
+    justify-content: center;
+    border-radius: 50%;
+    color: #fff;
+    padding: 1rem;
+    margin-right: 1rem; }
+    .prevention-step__number span {
+      font-size: 3rem;
+      font-family: 'RedHatDisplay', sans-serif;
+      color: #fa5652; }
+  .prevention-step__img {
+    flex: 1 0 40%; }
+    .prevention-step__img img {
+      width: 100%; }
+    .prevention-step__img--reverse {
+      flex: 1 0 45%; }
+      .prevention-step__img--reverse img {
+        width: 76%; }
+
+.footer__links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.footer__social-networks {
+  font-size: 1.5rem;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+
+.footer__copyright {
+  font-size: 1.7rem;
+  color: #415e56;
+  font-family: 'Gelion', sans-serif;
+  line-height: 28px; }
 
 .row {
   max-width: 114rem;
@@ -404,7 +449,10 @@ body {
       margin-bottom: 3.5rem; }
 
 .section-overview,
-.section-contagion {
+.section-contagion,
+.section-symptoms,
+.section-prevention,
+.section-contact {
   min-height: 55vh; }
 
 .section-overview {
@@ -441,3 +489,45 @@ body {
   .section-contagion__cards {
     display: flex;
     flex-wrap: wrap; }
+
+.section-symptoms {
+  background-image: url("../img/symptomps-virus-2.svg"), url("../img/symptomps-virus-1.svg");
+  background-repeat: no-repeat;
+  background-position: 5.2rem 60rem, right bottom; }
+  .section-symptoms__img {
+    width: 80%;
+    align-self: center; }
+
+.section-prevention {
+  background-image: url("../img/virus-2.svg"), url("../img/virus-3.svg"), url("../img/virus-4.svg");
+  background-repeat: no-repeat;
+  background-position: 0 55rem, right 85%, 100% bottom; }
+  .section-prevention .prevention-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; }
+
+.section-contact .map {
+  display: flex; }
+  .section-contact .map .report {
+    flex: 1 0 30%; }
+  .section-contact .map__img {
+    width: 50%;
+    flex: 1 0 70%; }
+
+.section-contact .contact-form {
+  width: 50%;
+  margin: 0 auto; }
+  .section-contact .contact-form .form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 80px rgba(0, 0, 0, 0.06);
+    border-radius: 57px; }
+    .section-contact .contact-form .form input {
+      border: none; }
+      .section-contact .contact-form .form input:focus {
+        border: none; }

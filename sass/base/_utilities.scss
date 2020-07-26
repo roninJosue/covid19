@@ -34,7 +34,18 @@
   font-size: 2.5rem;
 
   &--greater {
+    font-size: 5rem;
+    text-transform: capitalize;
+  }
+
+  &--medium {
+    font-size: 4rem;
+    text-transform: capitalize;
+  }
+
+  &--medium-2 {
     font-size: 4.5rem;
+    text-transform: capitalize;
   }
 
   &--color-2 {
@@ -54,6 +65,10 @@
     margin: 0 auto;
   }
 
+  &--3 {
+    width: 80%;
+  }
+
   &--center {
     text-align: center;
   }
@@ -62,4 +77,9 @@
 .container {
   width: 75vw;
   margin: 0 auto;
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+  }
 }
