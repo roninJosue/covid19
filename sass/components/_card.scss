@@ -12,6 +12,11 @@
   border-bottom: 5px solid transparent;
   transition: all .4s ease;
 
+  @include respond(tab-port){
+    padding: 1rem;
+    justify-content: start;
+  }
+
   &:hover {
     cursor: pointer;
     border-bottom-color: #fb4c47;
@@ -44,6 +49,10 @@
     font-weight: bold;
     font-size: 3rem;
     color: #035755;
+
+    @include respond(tab-port){
+      font-size: 2rem;
+    }
   }
 
   &__description {

@@ -8,9 +8,18 @@
   align-items: center;
   min-height: 85%;
 
+  @include respond(tab-port) {
+    background-position: 36rem 0;
+    background-size: 85%;
+    min-height: auto;
+  }
+
+  @include respond(tab-land) {
+    margin-top: 0;
+    background-position: center right;
+  }
+
   &--text {
-    width: 32%;
-    margin-left: 18rem;
     line-height: 5rem;
 
     .alert {
@@ -20,18 +29,30 @@
     }
 
     .stay-at-home {
+      width: 45%;
       font-size: 4rem;
       color: $color-text-primary;
       font-family: 'RedHatDisplay', sans-serif;
       margin-bottom: 2rem;
+
+      @include respond(tab-port) {
+        width: 40%;
+      }
+
     }
 
     .message {
+      width: 40%;
+      text-transform: capitalize;
       color: $color-tertiary;
       font-size: 1.7rem;
       font-family: 'Gelion', sans-serif;
       line-height: 190%;
       margin-bottom: 3.5rem;
+
+      @include respond(tab-port) {
+        width: 50%;
+      }
     }
   }
 }
@@ -48,6 +69,7 @@
   padding-top: 4rem;
   display: flex;
   align-items: center;
+  height: 100vh;
 
   &--img {
     width: 100%;
@@ -55,10 +77,24 @@
 
   .img {
     flex: 1 0 50%;
+    @include respond(tab-port) {
+      flex: 1 0 40%;
+    }
   }
 
   .text {
     flex: 1 0 50%;
+    @include respond(tab-port) {
+      flex: 1 0 60%;
+      .paragraph {
+        width: 100%;
+      }
+    }
+    @include respond(tab-land) {
+      .paragraph {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -66,6 +102,12 @@
   &__cards {
     display: flex;
     flex-wrap: wrap;
+    @include respond(tab-port) {
+      flex-wrap: nowrap;
+    }
+    @include respond(tab-land) {
+      flex-wrap: nowrap;
+    }
   }
 
   /*.container {
@@ -86,6 +128,11 @@
   background-image: url("../img/virus1.svg");
   background-repeat: no-repeat;
   background-position: 5.2rem bottom;
+
+  @include respond(tab-port) {
+    background-position: 1.2rem 53rem;
+    background-size: 15%;
+  }
   /*}*/
 }
 
@@ -95,6 +142,11 @@
   background-repeat: no-repeat;
   background-position: 5.2rem 60rem,
   right bottom;
+
+  @include respond(tab-port) {
+    background-position: 1.2rem 55rem, right bottom;
+    background-size: 12%, 20%;
+  }
 
   &__img {
     width: 80%;
@@ -110,6 +162,14 @@
   background-position: 0 55rem,
   right 85%,
   100% bottom;
+
+  @include respond(tab-port) {
+    background-size: 10%;
+  }
+
+  @include respond(tab-land) {
+    background-size: 10%;
+  }
 
   .prevention-list {
     display: flex;
@@ -137,17 +197,23 @@
     width: 50%;
     margin: 0 auto;
 
+    @include respond(tab-land) {
+      width: 60%;
+    }
+
     .form {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 2rem;
+      padding: 1.2rem;
       background: #FFFFFF;
       box-shadow: 0px 8px 80px rgba(0, 0, 0, 0.06);
       border-radius: 57px;
 
       input {
         border: none;
+        margin-left: 1.5rem;
+
         &:focus {
           border: none;
         }

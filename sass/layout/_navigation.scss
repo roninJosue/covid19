@@ -7,6 +7,10 @@
   justify-content: space-between;
   align-items: center;
 
+  @include respond(tab-port){
+    width: 85vw;
+  }
+
   &__logo{
     display: inline-block;
   }

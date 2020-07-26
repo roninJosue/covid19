@@ -11,12 +11,43 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+
+    .icon {
+      width: 100%;
+      height: 25px;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      :hover {
+        cursor: pointer;
+      }
+    }
+
+    .facebook {
+      background-image: url("../img/facebook.svg");
+    }
+
+    .youtube {
+      background-image: url("../img/youtube.svg");
+    }
+
+    .vimeo {
+      background-image: url("../img/vimeo.svg");
+    }
+
+    .twitter {
+      background-image: url("../img/twitter.svg");
+    }
   }
 
-  &__copyright{
+  &__copyright {
     font-size: 1.7rem;
     color: $color-footer;
     font-family: 'Gelion', sans-serif;
     line-height: 28px;
+  }
+
+  .navigation__list {
+    display: flex;
   }
 }

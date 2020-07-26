@@ -9,9 +9,8 @@
 	background-position: top;
 	position: relative;
 
-	@include respond(phone){
-		/*-webkit-clip-path: polygon(0 0, 100% 0,100% 85vh,0 100%);
-		clip-path: polygon(0 0, 100% 0,100% 85vh,0 100%);*/
+	@include respond(tab-port){
+		height: auto;
 	}
 
 	&__logo{
@@ -20,6 +19,9 @@
 
 		&-img {
 			height: 63px;
+			@include respond(tab-port){
+				height: 40px;
+			}
 		}
 	}
 
