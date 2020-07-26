@@ -50,4 +50,10 @@
   .navigation__list {
     display: flex;
   }
+
+  .navigation__item {
+    @include respond(phone){
+      width: auto;
+    }
+  }
 }

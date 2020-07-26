@@ -333,6 +333,8 @@ body {
         @media (max-width: 37.5em) {
           .prevention-step__img--reverse img {
             width: 100%; } }
+  .prevention-step__description {
+    margin-bottom: 4rem; }
 
 .footer__links {
   display: flex;
@@ -369,6 +371,10 @@ body {
 
 .footer .navigation__list {
   display: flex; }
+
+@media (max-width: 37.5em) {
+  .footer .navigation__item {
+    width: auto; } }
 
 .row {
   max-width: 114rem;
@@ -678,6 +684,10 @@ body {
     background: #FFFFFF;
     box-shadow: 0px 8px 80px rgba(0, 0, 0, 0.06);
     border-radius: 57px; }
+    .section-contact .contact-form .form div {
+      width: 100%; }
+      .section-contact .contact-form .form div input {
+        width: 90%; }
     @media (max-width: 37.5em) {
       .section-contact .contact-form .form .btn {
         padding: 1rem 2rem; } }
@@ -685,4 +695,5 @@ body {
       border: none;
       margin-left: 1.5rem; }
       .section-contact .contact-form .form input:focus {
-        border: none; }
+        border: none;
+        outline-width: 0; }
