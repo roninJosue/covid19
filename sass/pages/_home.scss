@@ -22,6 +22,11 @@
   &--text {
     line-height: 5rem;
 
+    @include respond(phone) {
+      width: 100%;
+      text-align: center;
+    }
+
     .alert {
       color: $color-alert;
       font-weight: bold;
@@ -39,6 +44,11 @@
         width: 40%;
       }
 
+      @include respond(phone) {
+        width: 100%;
+        text-align: center;
+      }
+
     }
 
     .message {
@@ -52,6 +62,11 @@
 
       @include respond(tab-port) {
         width: 50%;
+      }
+
+      @include respond(phone) {
+        width: 100%;
+        text-align: center;
       }
     }
   }
@@ -70,6 +85,11 @@
   display: flex;
   align-items: center;
   height: 100vh;
+
+  @include respond(phone) {
+    flex-direction: column;
+    margin-bottom: 20rem;
+  }
 
   &--img {
     width: 100%;
@@ -108,23 +128,11 @@
     @include respond(tab-land) {
       flex-wrap: nowrap;
     }
+    @include respond(tab-land) {
+      flex-direction: column;
+    }
   }
 
-  /*.container {
-    /*position: relative;
-    &:first-of-type {
-      &::before{
-        position: absolute;
-        content: '';
-        display: block;
-        width: 100px;
-        height: 50%;
-        bottom: 0;
-        left: -3rem;
-        background-image: url("../img/virus1.svg");
-        background-repeat: no-repeat;
-      }
-    }*/
   background-image: url("../img/virus1.svg");
   background-repeat: no-repeat;
   background-position: 5.2rem bottom;
@@ -132,6 +140,10 @@
   @include respond(tab-port) {
     background-position: 1.2rem 53rem;
     background-size: 15%;
+  }
+
+  @include respond(phone) {
+    margin-bottom: 20rem;
   }
   /*}*/
 }
@@ -148,9 +160,17 @@
     background-size: 12%, 20%;
   }
 
+  @include respond(phone) {
+    margin-bottom: 20rem;
+  }
+
   &__img {
     width: 80%;
     align-self: center;
+
+    @include respond(phone) {
+      width: 100%;
+    }
   }
 }
 
@@ -201,6 +221,11 @@
       width: 60%;
     }
 
+    @include respond(phone) {
+      width: 100%;
+    }
+
+
     .form {
       display: flex;
       justify-content: space-between;
@@ -209,6 +234,12 @@
       background: #FFFFFF;
       box-shadow: 0px 8px 80px rgba(0, 0, 0, 0.06);
       border-radius: 57px;
+
+      @include respond(phone) {
+        .btn {
+          padding: 1rem 2rem;
+        }
+      }
 
       input {
         border: none;

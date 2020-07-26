@@ -64,12 +64,18 @@ $breakpoint argument choices:
 .group {
   display: flex;
   align-items: center; }
+  @media (max-width: 37.5em) {
+    .group {
+      flex-direction: column; } }
 
 .h2 {
   color: #fa5652;
   font-weight: bold;
   font-family: 'RedHatDisplay', sans-serif;
   font-size: 2.5rem; }
+  @media (max-width: 37.5em) {
+    .h2 {
+      text-align: center; } }
   .h2--greater {
     font-size: 5rem;
     text-transform: capitalize; }
@@ -88,6 +94,9 @@ $breakpoint argument choices:
   line-height: 3rem;
   text-transform: capitalize;
   color: #4b4f51; }
+  @media (max-width: 37.5em) {
+    .paragraph {
+      width: 100% !important; } }
   .paragraph--2 {
     width: 50%;
     margin: 0 auto; }
@@ -230,6 +239,10 @@ body {
     .card {
       padding: 1rem;
       justify-content: start; } }
+  @media (max-width: 56.25em) {
+    .card {
+      width: 100%;
+      margin: 0 0 2rem; } }
   .card:hover {
     cursor: pointer;
     border-bottom-color: #fb4c47; }
@@ -268,12 +281,25 @@ body {
   margin: 2rem;
   align-items: center;
   justify-content: space-between; }
+  @media (max-width: 37.5em) {
+    .prevention-step {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; } }
   .prevention-step--reverse {
     flex-direction: row-reverse; }
+    @media (max-width: 37.5em) {
+      .prevention-step--reverse {
+        flex-direction: column; } }
   .prevention-step__text {
     flex: 1 0 60%;
     display: flex;
     flex-direction: row; }
+    @media (max-width: 37.5em) {
+      .prevention-step__text {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; } }
     .prevention-step__text--reverse {
       flex: 1 0 40%; }
       .prevention-step__text--reverse .paragraph {
@@ -289,6 +315,9 @@ body {
     color: #fff;
     padding: 3rem;
     margin-right: 3rem; }
+    @media (max-width: 37.5em) {
+      .prevention-step__number {
+        margin: 0; } }
     .prevention-step__number span {
       font-size: 3rem;
       font-family: 'RedHatDisplay', sans-serif;
@@ -301,6 +330,9 @@ body {
       flex: 1 0 45%; }
       .prevention-step__img--reverse img {
         width: 76%; }
+        @media (max-width: 37.5em) {
+          .prevention-step__img--reverse img {
+            width: 100%; } }
 
 .footer__links {
   display: flex;
@@ -399,6 +431,9 @@ body {
       @media (max-width: 56.25em) {
         .header__logo-img {
           height: 40px; } }
+      @media (max-width: 37.5em) {
+        .header__logo-img {
+          height: 30px; } }
   .header__logo-text {
     font-family: 'RedHatDisplay', Consolas;
     font-weight: bold;
@@ -407,6 +442,9 @@ body {
     line-height: 25px;
     text-transform: uppercase;
     margin-left: 1.2rem; }
+    @media (max-width: 37.5em) {
+      .header__logo-text {
+        font-size: 2.2rem; } }
 
 .navigation {
   display: flex;
@@ -419,15 +457,28 @@ body {
   @media (max-width: 56.25em) {
     .navigation {
       width: 85vw; } }
+  @media (max-width: 37.5em) {
+    .navigation {
+      width: 100vw;
+      flex-direction: column; } }
   .navigation__logo {
     display: inline-block; }
   .navigation__list {
     margin: 0; }
+    @media (max-width: 37.5em) {
+      .navigation__list {
+        display: flex;
+        width: 100vw;
+        flex-direction: column; } }
   .navigation__item {
     display: inline;
     text-decoration: none;
     margin-right: 3rem;
     transition: all 2s ease; }
+    @media (max-width: 37.5em) {
+      .navigation__item {
+        width: 100vw;
+        text-align: center; } }
   .navigation__link {
     color: #035755;
     text-decoration: none;
@@ -472,6 +523,10 @@ body {
       background-position: center right; } }
   .illustration--text {
     line-height: 5rem; }
+    @media (max-width: 37.5em) {
+      .illustration--text {
+        width: 100%;
+        text-align: center; } }
     .illustration--text .alert {
       color: #fa5652;
       font-weight: bold;
@@ -485,6 +540,10 @@ body {
       @media (max-width: 56.25em) {
         .illustration--text .stay-at-home {
           width: 40%; } }
+      @media (max-width: 37.5em) {
+        .illustration--text .stay-at-home {
+          width: 100%;
+          text-align: center; } }
     .illustration--text .message {
       width: 40%;
       text-transform: capitalize;
@@ -496,6 +555,10 @@ body {
       @media (max-width: 56.25em) {
         .illustration--text .message {
           width: 50%; } }
+      @media (max-width: 37.5em) {
+        .illustration--text .message {
+          width: 100%;
+          text-align: center; } }
 
 .section-overview,
 .section-contagion,
@@ -509,6 +572,10 @@ body {
   display: flex;
   align-items: center;
   height: 100vh; }
+  @media (max-width: 37.5em) {
+    .section-overview {
+      flex-direction: column;
+      margin-bottom: 20rem; } }
   .section-overview--img {
     width: 100%; }
   .section-overview .img {
@@ -528,21 +595,6 @@ body {
         width: 100%; } }
 
 .section-contagion {
-  /*.container {
-    /*position: relative;
-    &:first-of-type {
-      &::before{
-        position: absolute;
-        content: '';
-        display: block;
-        width: 100px;
-        height: 50%;
-        bottom: 0;
-        left: -3rem;
-        background-image: url("../img/virus1.svg");
-        background-repeat: no-repeat;
-      }
-    }*/
   background-image: url("../img/virus1.svg");
   background-repeat: no-repeat;
   background-position: 5.2rem bottom;
@@ -556,10 +608,16 @@ body {
     @media (max-width: 75em) {
       .section-contagion__cards {
         flex-wrap: nowrap; } }
+    @media (max-width: 75em) {
+      .section-contagion__cards {
+        flex-direction: column; } }
   @media (max-width: 56.25em) {
     .section-contagion {
       background-position: 1.2rem 53rem;
       background-size: 15%; } }
+  @media (max-width: 37.5em) {
+    .section-contagion {
+      margin-bottom: 20rem; } }
 
 .section-symptoms {
   background-image: url("../img/symptomps-virus-2.svg"), url("../img/symptomps-virus-1.svg");
@@ -569,9 +627,15 @@ body {
     .section-symptoms {
       background-position: 1.2rem 55rem, right bottom;
       background-size: 12%, 20%; } }
+  @media (max-width: 37.5em) {
+    .section-symptoms {
+      margin-bottom: 20rem; } }
   .section-symptoms__img {
     width: 80%;
     align-self: center; }
+    @media (max-width: 37.5em) {
+      .section-symptoms__img {
+        width: 100%; } }
 
 .section-prevention {
   background-image: url("../img/virus-2.svg"), url("../img/virus-3.svg"), url("../img/virus-4.svg");
@@ -603,6 +667,9 @@ body {
   @media (max-width: 75em) {
     .section-contact .contact-form {
       width: 60%; } }
+  @media (max-width: 37.5em) {
+    .section-contact .contact-form {
+      width: 100%; } }
   .section-contact .contact-form .form {
     display: flex;
     justify-content: space-between;
@@ -611,6 +678,9 @@ body {
     background: #FFFFFF;
     box-shadow: 0px 8px 80px rgba(0, 0, 0, 0.06);
     border-radius: 57px; }
+    @media (max-width: 37.5em) {
+      .section-contact .contact-form .form .btn {
+        padding: 1rem 2rem; } }
     .section-contact .contact-form .form input {
       border: none;
       margin-left: 1.5rem; }

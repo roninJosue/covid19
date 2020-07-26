@@ -5,14 +5,29 @@
   align-items: center;
   justify-content: space-between;
 
+  @include respond(phone) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   &--reverse {
     flex-direction: row-reverse;
+    @include respond(phone) {
+      flex-direction: column;
+    }
   }
 
   &__text {
     flex: 1 0 60%;
     display: flex;
     flex-direction: row;
+
+    @include respond(phone) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
 
     &--reverse {
       flex: 1 0 40%;
@@ -34,6 +49,10 @@
     padding: 3rem;
     margin-right: 3rem;
 
+    @include respond(phone) {
+     margin: 0;
+    }
+
     span {
       font-size: 3rem;
       font-family: 'RedHatDisplay', sans-serif;
@@ -51,6 +70,9 @@
       flex: 1 0 45%;
       img {
         width: 76%;
+        @include respond(phone) {
+          width: 100%;
+        }
       }
     }
   }
