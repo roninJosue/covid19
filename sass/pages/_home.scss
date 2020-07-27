@@ -224,6 +224,7 @@
   min-height: 50vh;
   .map {
     display: flex;
+    flex-wrap: wrap;
 
     .report {
       flex: 1 0 30%;
