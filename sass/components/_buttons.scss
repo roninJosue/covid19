@@ -67,6 +67,13 @@
       /*background-color: $color-btn-outline;*/
       border: 2px solid $color-btn-outline;
     }
+
+    &-menu {
+      @include respond(phone){
+        padding: .5rem 3rem!important;
+        animation: none!important;
+      }
+    }
   }
 
   &--red{

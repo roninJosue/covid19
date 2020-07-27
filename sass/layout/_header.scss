@@ -1,9 +1,6 @@
 .header {
 	height: 100vh;
 	font-size: 1.6rem;
-	/*background: linear-gradient(360deg, rgba(255, 248, 248, 0.5) 0%, rgba(255, 241, 241, 0) 108.69%);*/
-	/*background: rgb(255,248,248);*/
-	/*background: linear-gradient(90deg, rgba(255,248,248,1) 85%, rgba(255,255,255,1) 100%);*/
 	background: linear-gradient(90deg, rgba($bg-color, 1) 85%, rgba(255,255,255,1) 100%);
 	background-size: cover;
 	background-position: top;
@@ -16,6 +13,10 @@
 	&__logo{
 		display: flex;
 		align-items: center;
+
+		@include respond(phone){
+			flex: 1 0 50%;
+		}
 
 		&-img {
 			height: 63px;
@@ -39,6 +40,59 @@
 
 		@include respond(phone){
 			font-size: 2.2rem;
+		}
+	}
+
+	&__menu-btn {
+		display: none;
+		&:checked ~ .navigation__list {
+			display: flex;
+		}
+	}
+
+	&__menu {
+		//text-align: right;
+		display: none;
+		height: 7rem;
+		width: 7rem;
+		border-radius: 50%;
+		box-shadow: 0 1rem 3rem rgba($color-alert, 0.4);
+		text-align: center;
+		cursor: pointer;
+
+		&-icon {
+			position: relative;
+			margin-top: 3.6rem;
+
+			&,
+			&::after,
+			&::before {
+				width: 3rem;
+				height: 2px;
+				background-color: $color-alert;
+				display: inline-block;
+			}
+
+			&::after,
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				transition: all .2s;
+			}
+
+			&::after {
+				top: .8rem;
+			}
+
+			&::before {
+				top: -.8rem;
+			}
+		}
+
+		@include respond(phone){
+			display: inline-block;
+			/*flex: 1 0 50%;*/
 		}
 	}
 

@@ -6,24 +6,26 @@
   padding-top: 2.6rem;
   justify-content: space-between;
   align-items: center;
+  transition: all .5s ease;
 
-  @include respond(tab-port){
+  @include respond(tab-port) {
     width: 85vw;
   }
 
-  @include respond(phone){
-    width: 100%;
-    flex-direction: column;
+  @include respond(phone) {
+    width:90vw;
+    flex-wrap: wrap;
   }
 
-  &__logo{
+  &__logo {
     display: inline-block;
   }
 
   &__list {
     margin: 0;
-    @include respond(phone){
-      display: flex;
+    transition: all .5 ease;
+    @include respond(phone) {
+      display: none;
       width: 100%;
       flex-direction: column;
     }
@@ -32,13 +34,16 @@
   &__item {
     display: inline;
     text-decoration: none;
-    margin-right: 3rem;
     transition: all 2s ease;
 
-    @include respond(phone){
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+
+    @include respond(phone) {
       width: 100%;
       text-align: center;
-      margin: 0;
+      margin-bottom: 2rem;
     }
   }
 

@@ -80,6 +80,7 @@
     @include respond(phone) {
       width: auto;
       margin-bottom: 1rem;
+      margin-right: 0!important;
     }
   }
 

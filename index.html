@@ -13,31 +13,37 @@
                 <img class="header__logo-img" src="img/covid-logo.png" alt="Logo">
                 <span class="header__logo-text">covid - 19</span>
             </div>
-            <div class="group">
-                <ul class="navigation__list">
-                    <li class="navigation__item">
+            <label class="header__menu" for="menu-btn">
+                <span class="header__menu-icon"></span>
+            </label>
+            <input type="checkbox" class="header__menu-btn" id="menu-btn">
+            <ul class="navigation__list">
+                <li class="navigation__item">
                         <a class="navigation__link" href="#overview">
                             Overview
                         </a>
                     </li>
-                    <li class="navigation__item">
+                <li class="navigation__item">
                         <a class="navigation__link" href="#contagion">
                             Contagion
                         </a>
                     </li>
-                    <li class="navigation__item">
+                <li class="navigation__item">
                         <a class="navigation__link" href="#symptoms">
                             Symptoms
                         </a>
                     </li>
-                    <li class="navigation__item">
+                <li class="navigation__item">
                         <a class="navigation__link" href="#prevention">
                             Prevention
                         </a>
                     </li>
-                </ul>
-                <a class="btn btn--outline btn--animated" href="#contact">Contact</a>
-            </div>
+                <li class="navigation__item">
+                        <a href="#contact" class="btn btn--outline btn--outline-menu btn--animated">
+                            Contact
+                        </a>
+                    </li>
+            </ul>
         </nav>
         <div class="illustration">
             <div class="illustration--text container">
