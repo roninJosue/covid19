@@ -668,6 +668,14 @@ body {
 .section-prevention,
 .section-contact {
   min-height: 55vh; }
+  @media (max-width: 37.5em) {
+    .section-overview,
+    .section-contagion,
+    .section-symptoms,
+    .section-prevention,
+    .section-contact {
+      margin-bottom: 10rem;
+      min-height: 95vh; } }
 
 .section-overview {
   padding-top: 4rem;
@@ -676,8 +684,7 @@ body {
   height: 100vh; }
   @media (max-width: 37.5em) {
     .section-overview {
-      flex-direction: column;
-      margin-bottom: 20rem; } }
+      flex-direction: column; } }
   .section-overview--img {
     width: 100%; }
   .section-overview .img {
@@ -699,8 +706,7 @@ body {
 .section-contagion {
   background-image: url("../img/virus1.svg");
   background-repeat: no-repeat;
-  background-position: 5.2rem bottom;
-  /*}*/ }
+  background-position: 5.2rem bottom; }
   .section-contagion__cards {
     display: flex;
     flex-wrap: wrap; }
@@ -718,9 +724,6 @@ body {
     .section-contagion {
       background-position: 1.2rem 53rem;
       background-size: 15%; } }
-  @media (max-width: 37.5em) {
-    .section-contagion {
-      margin-bottom: 20rem; } }
 
 .section-symptoms {
   background-image: url("../img/symptomps-virus-2.svg"), url("../img/symptomps-virus-1.svg");
@@ -730,9 +733,6 @@ body {
     .section-symptoms {
       background-position: 1.2rem 55rem, right bottom;
       background-size: 12%, 20%; } }
-  @media (max-width: 37.5em) {
-    .section-symptoms {
-      margin-bottom: 20rem; } }
   .section-symptoms__img {
     width: 80%;
     align-self: center; }
@@ -756,41 +756,46 @@ body {
     align-items: center;
     justify-content: space-between; }
 
-.section-contact .map {
-  display: flex; }
-  .section-contact .map .report {
-    flex: 1 0 30%; }
-  .section-contact .map__img {
+.section-contact {
+  margin-bottom: 0;
+  min-height: 50vh; }
+  .section-contact .map {
+    display: flex; }
+    .section-contact .map .report {
+      flex: 1 0 30%; }
+    .section-contact .map__img {
+      width: 50%;
+      flex: 1 0 70%; }
+      @media (max-width: 37.5em) {
+        .section-contact .map__img {
+          width: 100%; } }
+  .section-contact .contact-form {
     width: 50%;
-    flex: 1 0 70%; }
-
-.section-contact .contact-form {
-  width: 50%;
-  margin: 0 auto; }
-  @media (max-width: 75em) {
-    .section-contact .contact-form {
-      width: 60%; } }
-  @media (max-width: 37.5em) {
-    .section-contact .contact-form {
-      width: 100%; } }
-  .section-contact .contact-form .form {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.2rem;
-    background: #FFFFFF;
-    box-shadow: 0px 8px 80px rgba(0, 0, 0, 0.06);
-    border-radius: 57px; }
-    .section-contact .contact-form .form div {
-      width: 100%; }
-      .section-contact .contact-form .form div input {
-        width: 90%; }
+    margin: 0 auto; }
+    @media (max-width: 75em) {
+      .section-contact .contact-form {
+        width: 60%; } }
     @media (max-width: 37.5em) {
-      .section-contact .contact-form .form .btn {
-        padding: 1rem 2rem; } }
-    .section-contact .contact-form .form input {
-      border: none;
-      margin-left: 1.5rem; }
-      .section-contact .contact-form .form input:focus {
+      .section-contact .contact-form {
+        width: 100%; } }
+    .section-contact .contact-form .form {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem;
+      background: #FFFFFF;
+      box-shadow: 0px 8px 80px rgba(0, 0, 0, 0.06);
+      border-radius: 57px; }
+      .section-contact .contact-form .form div {
+        width: 100%; }
+        .section-contact .contact-form .form div input {
+          width: 90%; }
+      @media (max-width: 37.5em) {
+        .section-contact .contact-form .form .btn {
+          padding: 1rem 2rem; } }
+      .section-contact .contact-form .form input {
         border: none;
-        outline-width: 0; }
+        margin-left: 1.5rem; }
+        .section-contact .contact-form .form input:focus {
+          border: none;
+          outline-width: 0; }

@@ -102,6 +102,10 @@
 .section-prevention,
 .section-contact {
   min-height: 55vh;
+  @include respond(phone) {
+    margin-bottom: 10rem;
+    min-height: 95vh;
+  }
 }
 
 .section-overview {
@@ -112,7 +116,6 @@
 
   @include respond(phone) {
     flex-direction: column;
-    margin-bottom: 20rem;
   }
 
   &--img {
@@ -167,10 +170,6 @@
     background-size: 15%;
   }
 
-  @include respond(phone) {
-    margin-bottom: 20rem;
-  }
-  /*}*/
 }
 
 .section-symptoms {
@@ -183,10 +182,6 @@
   @include respond(tab-port) {
     background-position: 1.2rem 55rem, right bottom;
     background-size: 12%, 20%;
-  }
-
-  @include respond(phone) {
-    margin-bottom: 20rem;
   }
 
   &__img {
@@ -225,6 +220,8 @@
 }
 
 .section-contact {
+  margin-bottom: 0;
+  min-height: 50vh;
   .map {
     display: flex;
 
@@ -235,6 +232,9 @@
     &__img {
       width: 50%;
       flex: 1 0 70%;
+      @include respond(phone) {
+        width: 100%;
+      }
     }
   }
 
