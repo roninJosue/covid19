@@ -489,10 +489,6 @@ body {
     @media (max-width: 37.5em) {
       .header__logo-text {
         font-size: 2.2rem; } }
-  .header__menu-btn {
-    display: none; }
-    .header__menu-btn:checked ~ .navigation__list {
-      display: flex; }
   .header__menu {
     display: none;
     height: 7rem;
@@ -501,6 +497,18 @@ body {
     box-shadow: 0 1rem 3rem rgba(250, 86, 82, 0.4);
     text-align: center;
     cursor: pointer; }
+    .header__menu-btn {
+      display: none; }
+      .header__menu-btn:checked ~ .navigation__list {
+        display: flex; }
+      .header__menu-btn:checked + .header__menu .header__menu-icon {
+        background: transparent; }
+      .header__menu-btn:checked + .header__menu .header__menu-icon::before {
+        top: 0;
+        transform: rotate(135deg); }
+      .header__menu-btn:checked + .header__menu .header__menu-icon::after {
+        top: 0;
+        transform: rotate(45deg); }
     .header__menu-icon {
       position: relative;
       margin-top: 3.6rem; }
