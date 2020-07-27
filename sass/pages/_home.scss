@@ -128,7 +128,8 @@
     @include respond(tab-land) {
       flex-wrap: nowrap;
     }
-    @include respond(tab-land) {
+    @include respond(phone) {
+      align-items: center;
       flex-direction: column;
     }
   }

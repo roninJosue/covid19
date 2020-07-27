@@ -17,8 +17,9 @@
     justify-content: start;
   }
 
-  @include respond(tab-port){
-    width: 100%;
+  @include respond(phone){
+    padding: 5rem;
+    width: 80%;
     margin: 0 0 2rem;
   }
 
