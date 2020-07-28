@@ -13,6 +13,40 @@
 	transform: translate(-50%, -50%);
 }
 
+@mixin bar {
+	width: 2.5rem;
+	height: 2px;
+	background-color: $color-control;
+}
+
+@mixin triangulo($direccion, $color, $tamanho-triangulo: 8px) {
+	//&::after {
+	width: 0;
+	height: 0;
+
+	@if ($direccion == "right") {
+		border-top: #{$tamanho-triangulo} solid transparent;
+		border-bottom: #{$tamanho-triangulo} solid transparent;
+		border-left: #{$tamanho-triangulo} solid $color;
+	}
+	@if ($direccion == "down") {
+		border-left: #{$tamanho-triangulo} solid transparent;
+		border-right: #{$tamanho-triangulo} solid transparent;
+		border-top: #{$tamanho-triangulo} solid $color;
+	}
+	@if ($direccion == "up"){
+		border-left: #{$tamanho-triangulo} solid transparent;
+		border-right: #{$tamanho-triangulo} solid transparent;
+		border-bottom: #{$tamanho-triangulo} solid $color;
+	}
+	@if ($direccion == "left"){
+		border-top: $tamanho-triangulo solid transparent;
+		border-bottom: $tamanho-triangulo solid transparent;
+		border-right: $tamanho-triangulo solid $color;
+	}
+	//}
+}
+
 
 // MEDIA QUERY MANAGER
 /*

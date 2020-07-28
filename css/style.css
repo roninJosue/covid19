@@ -414,6 +414,91 @@ body {
     font-size: 2.8rem;
     line-height: 4rem; } }
 
+.control__size {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
+  width: 5.3rem;
+  height: 14rem;
+  position: absolute;
+  left: 5rem;
+  box-shadow: 0px 5px 50px rgba(104, 33, 28, 0.1);
+  border-radius: 5px;
+  padding: 1rem 0 1rem; }
+  .control__size-plus, .control__size-minus {
+    width: 2.5rem;
+    height: 2px;
+    background-color: #687089;
+    display: inline-block;
+    position: relative;
+    cursor: pointer; }
+    .control__size-plus:hover, .control__size-minus:hover {
+      background-color: #fa5652; }
+      .control__size-plus:hover::before, .control__size-minus:hover::before {
+        background-color: #fa5652; }
+  .control__size-plus {
+    margin-bottom: 1rem; }
+    .control__size-plus::before {
+      content: '';
+      width: 2.5rem;
+      height: 2px;
+      background-color: #687089;
+      transform: rotate(90deg);
+      position: absolute; }
+  .control__size-separator {
+    background-color: #687089;
+    width: 1rem;
+    height: .7px; }
+  .control__size-adjust {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -1.4rem; }
+
+.triangle,
+.triangle:before,
+.triangle:after {
+  width: 2em;
+  height: 2em; }
+
+.triangle {
+  overflow: hidden;
+  position: relative;
+  margin-right: 1rem;
+  border-radius: 20%;
+  transform: translateY(54%) rotate(90deg) skewY(-150deg) scaleX(0.866);
+  cursor: pointer; }
+  .triangle-up {
+    margin: 0;
+    transform: translateY(95%) rotate(30deg) skewY(-150deg) scaleX(0.866); }
+
+.triangle:before, .triangle:after {
+  position: absolute;
+  background: #687089;
+  content: ''; }
+
+.triangle:before {
+  border-radius: 20% 20% 20% 53%;
+  transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) skewX(30deg) scaleY(0.866) translateX(-24%); }
+
+.triangle:after {
+  border-radius: 20% 20% 53% 20%;
+  transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) skewX(-30deg) scaleY(0.866) translateX(24%); }
+
+/** extra styles to show how it works **/
+.triangle:hover {
+  overflow: hidden; }
+
+.triangle:hover:before, .triangle:hover:after {
+  background: #fa5652; }
+
+/*
+.triangle:hover, .triangle:hover:before, .triangle:hover:after {
+  border: dashed 1px;
+}*/
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -675,7 +760,8 @@ body {
 .section-symptoms,
 .section-prevention,
 .section-contact {
-  min-height: 55vh; }
+  min-height: 55vh;
+  margin-bottom: 15rem; }
   @media (max-width: 37.5em) {
     .section-overview,
     .section-contagion,
@@ -765,19 +851,36 @@ body {
     justify-content: space-between; }
 
 .section-contact {
-  margin-bottom: 0;
   min-height: 50vh; }
-  .section-contact .map {
+  .section-contact .map-coronavirus {
     display: flex;
     flex-wrap: wrap; }
-    .section-contact .map .report {
+    .section-contact .map-coronavirus .report {
       flex: 1 0 30%; }
-    .section-contact .map__img {
-      width: 50%;
+    .section-contact .map-coronavirus .map {
+      position: relative;
       flex: 1 0 70%; }
-      @media (max-width: 37.5em) {
-        .section-contact .map__img {
-          width: 100%; } }
+      .section-contact .map-coronavirus .map__img {
+        width: 100%; }
+        @media (max-width: 37.5em) {
+          .section-contact .map-coronavirus .map__img {
+            width: 100%; } }
+      .section-contact .map-coronavirus .map .search {
+        box-shadow: 0px 5px 50px rgba(104, 33, 28, 0.1);
+        border-radius: 5px;
+        width: 5rem;
+        height: 5rem;
+        position: absolute;
+        background: #fff;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center; }
+        .section-contact .map-coronavirus .map .search-icon {
+          background-image: url("../img/lens.svg");
+          background-size: cover;
+          width: 50%;
+          height: 50%; }
   .section-contact .contact-form {
     width: 50%;
     margin: 0 auto; }

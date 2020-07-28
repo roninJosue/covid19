@@ -1,0 +1,108 @@
+.control__size {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: $color-white;
+  width: 5.3rem;
+  height: 14rem;
+  position: absolute;
+  left: 5rem;
+  box-shadow: 0px 5px 50px rgba(104, 33, 28, 0.1);
+  border-radius: 5px;
+  padding: 1rem 0 1rem;
+
+  &-plus,
+  &-minus {
+    @include bar;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-alert;
+
+      &::before {
+        background-color: $color-alert;
+      }
+    }
+  }
+
+  &-plus {
+    margin-bottom: 1rem;
+
+    &::before {
+      content: '';
+      @include bar;
+      transform: rotate(90deg);
+      position: absolute;
+    }
+  }
+
+  &-separator {
+    background-color: $color-control;
+    width: 1rem;
+    height: .7px;
+  }
+
+  &-adjust {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -1.4rem;
+  }
+
+}
+
+.triangle,
+.triangle:before,
+.triangle:after {
+  width: 2em;
+  height: 2em;
+}
+
+.triangle {
+  overflow: hidden;
+  position: relative;
+  margin-right: 1rem;
+  border-radius: 20%;
+  transform: translateY(54%) rotate(90deg) skewY(-150deg) scaleX(.866);
+  cursor: pointer;
+
+  &-up {
+    margin: 0;
+    transform: translateY(95%) rotate(30deg) skewY(-150deg) scaleX(0.866);
+  }
+}
+
+.triangle:before, .triangle:after {
+  position: absolute;
+  background: $color-control;
+  content: '';
+}
+
+.triangle:before {
+  border-radius: 20% 20% 20% 53%;
+  transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) skewX(30deg) scaleY(.866) translateX(-24%);
+}
+
+.triangle:after {
+  border-radius: 20% 20% 53% 20%;
+  transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%) skewX(-30deg) scaleY(.866) translateX(24%);
+}
+
+/** extra styles to show how it works **/
+
+.triangle:hover {
+  overflow: hidden;
+}
+
+.triangle:hover:before, .triangle:hover:after {
+  background: $color-alert;
+}
+
+/*
+.triangle:hover, .triangle:hover:before, .triangle:hover:after {
+  border: dashed 1px;
+}*/
