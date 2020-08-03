@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   min-height: 85%;
+
   &:after {
     position: absolute;
     content: '';
@@ -222,6 +223,7 @@
 
 .section-contact {
   min-height: 50vh;
+
   .map-coronavirus {
     display: flex;
     flex-wrap: wrap;
@@ -229,10 +231,137 @@
     .report {
       flex: 1 0 25%;
 
-      box-shadow: 0px 5px 50px rgba(104, 33, 28, 0.1);
-      border-radius: 5px;
-      width: 15rem;
-      background: $color-white;
+      &__header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &__navigate {
+        width: 6.5rem;
+        height: 4rem;
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        background: #FFFFFF;
+        box-shadow: 0px 5px 50px rgba(87, 1, 0, 0.1);
+        border-radius: 6.16667px;
+      }
+
+      &__left-arrow,
+      &__right-arrow {
+        width: 10px;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+      }
+
+      &__left-arrow {
+        background-image: url("../img/left-arrow.svg");
+      }
+
+      &__right-arrow {
+        background-image: url("../img/right-arrow.svg");
+      }
+
+      &__countries {
+        margin-top: 2rem;
+      }
+
+      &__country {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      &__country-name {
+        font-size: 2.3rem;
+        font-family: 'Gelion', sans-serif;
+        color: $color-text-primary;
+        font-weight: bold;
+      }
+
+      &__list {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      &__item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:not(:last-child) {
+          margin-bottom: 3rem;
+        }
+      }
+
+      &__flag {
+        width: 45px;
+        height: 30px;
+        background-position: center;
+        background-size: cover;
+        display: inline-block;
+        margin-right: 2.5rem;
+
+        &--usa {
+          background-image: url("../img/flags/usa.svg");
+        }
+
+        &--italy {
+          background-image: url("../img/flags/italy.svg");
+        }
+
+        &--china {
+          background-image: url("../img/flags/china.svg");
+        }
+
+        &--spain {
+          background-image: url("../img/flags/spain.svg");
+        }
+
+        &--iran {
+          background-image: url("../img/flags/iran.svg");
+        }
+
+        &--germany {
+          background-image: url("../img/flags/germany.svg");
+        }
+      }
+
+      &__data {
+        width: 32%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        &-arrow {
+          margin-left: 1rem;
+          width: 20px;
+          height: 100%;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+
+          &--up {
+            background-image: url("../img/arrow-up.svg");
+          }
+
+          &--down {
+            background-image: url("../img/arrow-down.svg");
+          }
+        }
+
+        &-number {
+          font-size: 1.7rem;
+          font-weight: bold;
+          font-family: 'Gelion', sans-serif;
+          color: $color-text-primary;
+        }
+      }
     }
 
     .map {
@@ -298,6 +427,7 @@
 
       div {
         width: 100%;
+
         input {
           width: 90%;
         }
